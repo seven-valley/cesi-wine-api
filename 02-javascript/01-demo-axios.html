@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-4">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <!--
+                     <tr>
+                    <td></td>
+                    <td></td>
+                </tr> 
+            -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <template id="ligne">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+  </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+  let film = "saw";
+  let url = "https://www.omdbapi.com/?apikey=efdc2275&s=" + film;
+  // t =   => on a 1 fim
+  // s =   => tableau de films
+  async function go() {
+    const response = await axios.get(url);
+    console.log(response.data);
+    let tableau = response.data.Search;
+    console.log(tableau);
+    // slecteur sur la balise tbody
+    const tbody = document.querySelector("#tbody");
+    // sleceteur sur le template
+    const template = document.querySelector("#ligne");
+
+    for (let film of tableau) {
+      // je clone mon template
+      const clone = template.content.cloneNode(true);
+      let td = clone.querySelectorAll("td");
+      td[0].textContent = film.Title;
+      let img = document.createElement('img');
+      img.setAttribute('src',film.Poster);
+      img.setAttribute('width',80);
+      td[1].appendChild(img);
+      // on rajoute la balise tr ds le tbody
+      tbody.appendChild(clone);
+    }
+  }
+  go();
+</script>

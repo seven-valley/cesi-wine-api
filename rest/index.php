@@ -3,11 +3,11 @@
 // detecter la method ???
 
 // detecter URL
-//http://localhost/wine-api/rest/personne/4
+// http://localhost/wine-api/rest/personne/4
 
-//http://localhost/wine-api/rest/toto/tutu/tata/4
+// http://localhost/wine-api/rest/toto/tutu/tata/4
 
-///toto/tutu/tata/4
+ // toto/tutu/tata/4
 
 
 if(isset($_SERVER['REDIRECT_URL'])){ 
