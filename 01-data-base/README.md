@@ -10,12 +10,12 @@ CREATE TABLE IF NOT EXISTS `produit` (
   `annee` year NOT NULL,
   `prix` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 INSERT INTO `produit` (`id`, `nom`, `annee`, `prix`) VALUES
-(1, 'test vin 2', 2000, 1200.99),
+(1, 'SAINT-ÉMILION GRAND CRU CHÂTEAU GRAND MAYNE', 2011, 37.99),
 (2, 'A.O.P MÉDOC CRU BOURGEOIS', 2018, 13.99),
-(3, 'toto', 0000, 0),
-(6, 'test vin 2', 2000, 1200.99);
+(3, 'A.O.P SAUMUR-CHAMPIGNY', 2022, 12.90),
+
 
 ````
