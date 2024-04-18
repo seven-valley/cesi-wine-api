@@ -1,7 +1,7 @@
 # Mise en place d'une relation One To Many / Many To One
 
 ** création d'un clef étrangère **
-![alt text](modele-relationel.png)
+![base](./img/modele-relationel.png)
 
 ## la structure
 
@@ -65,7 +65,7 @@ class Categ  extends Model
 ## Affichage des données
 
 ** liste des personnes **
-
+![personnes](./img/personnes.png)
 ```php
 $personnes = Model::factory('Personne')->find_many();
  foreach ($personnes as $personne) :
@@ -76,6 +76,7 @@ $personnes = Model::factory('Personne')->find_many();
 ```
 
 ** liste des catégories **
+![categories](./img/categories.png)
 
 ```php
 $categs = Model::factory('Categ')->find_many();
