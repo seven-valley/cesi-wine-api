@@ -1,8 +1,8 @@
 # Mise en place d'une relation One To Many / Many To One  
 
-** création d'un clef étrangère **
+** création d'une clef étrangère **
 
-![base](./img/modele-relationel.png)
+![base](./img/modele-relationnel.png)
 
 ## la structure
 
