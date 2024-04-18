@@ -3,7 +3,7 @@
 ** création d'une clef étrangère **
 
 ![base](./img/modele-relationnel.png)
-
+img[alt=base] { width: 200px; }
 ## la structure
 
 ```mysql
