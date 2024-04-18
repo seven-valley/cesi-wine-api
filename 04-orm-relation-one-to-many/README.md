@@ -2,7 +2,7 @@
 
 **création d'une clef étrangère**
 
-![base](./img/modele-relationnel.png)
+![base](./img/modele-relationnel.png=100x)
 
 ## la structure
 
