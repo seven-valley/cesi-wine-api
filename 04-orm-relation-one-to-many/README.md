@@ -1,9 +1,9 @@
 # Mise en place d'une relation One To Many / Many To One  
 
-** création d'une clef étrangère **
+**création d'une clef étrangère**
 
 ![base](./img/modele-relationnel.png)
-img[alt=base] { width: 200px; }
+
 ## la structure
 
 ```mysql
@@ -37,7 +37,7 @@ INSERT INTO `personne` (`id`, `prenom`, `nom`, `categ_id`) VALUES
 
 ## Déclaration des relations dans l'ORM
 
-La classe ** Personne **
+La classe **Personne**
 
 ```php
 class Personne  extends Model
@@ -50,7 +50,7 @@ class Personne  extends Model
 }
 ```
 
-La classe ** Categ **
+La classe **Categ**
 
 ```php
 class Categ  extends Model
@@ -65,7 +65,7 @@ class Categ  extends Model
 
 ## Affichage des données
 
-** liste des personnes **
+**liste des personnes**
 
 ```php
 $personnes = Model::factory('Personne')->find_many();
@@ -77,7 +77,7 @@ $personnes = Model::factory('Personne')->find_many();
 ```
 ![personnes](./img/personnes.png)
   
-** liste des catégories **  
+**liste des catégories**  
 
 
 ```php
