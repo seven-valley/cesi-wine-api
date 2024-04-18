@@ -3,6 +3,7 @@ require_once './inc/config.inc.php';
 require_once './inc/class/business-object.inc.php';
 // je viens récupérer un tableau de personnes
 $personnes = Model::factory('Personne')->find_many();
+
 ?>
 
 
