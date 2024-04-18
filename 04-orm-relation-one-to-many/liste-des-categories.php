@@ -2,7 +2,7 @@
 require_once './inc/config.inc.php';
 require_once './inc/class/business-object.inc.php';
 // je viens récupérer un tableau de personnes
-$personnes = Model::factory('Personne')->find_many();
+$categs = Model::factory('Categ')->find_many();
 ?>
 
 
@@ -19,7 +19,9 @@ $personnes = Model::factory('Personne')->find_many();
 <body>
     <div class="container">
         <div class="col-4">
-            <h1> Liste des personnes</h1>
+            <h1> Liste des catégorie</h1>
+            <?php foreach( $categs as $categ) :?>
+            <h2><?=$categ->nom ?></h2>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -29,7 +31,9 @@ $personnes = Model::factory('Personne')->find_many();
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($personnes as $personne) : ?>
+                    <?php 
+                    $personnes = $categ->personnes()->find_many();
+                    foreach ($personnes as $personne) : ?>
                         <tr>
                             <td><?= $personne->prenom ?></td>
                             <td><?= $personne->nom ?></td>
@@ -43,7 +47,7 @@ $personnes = Model::factory('Personne')->find_many();
                     <?php endforeach; ?>
                 </tbody>
             </table>
-
+            <?php endforeach; ?>
         </div>
     </div>
 </body>
