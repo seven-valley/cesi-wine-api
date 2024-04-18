@@ -65,7 +65,7 @@ class Categ  extends Model
 ## Affichage des données
 
 ** liste des personnes **
-![personnes](./img/personnes.png)
+
 ```php
 $personnes = Model::factory('Personne')->find_many();
  foreach ($personnes as $personne) :
@@ -74,9 +74,10 @@ $personnes = Model::factory('Personne')->find_many();
     echo $personne->categ()->find_one()->nom ."<br>";
  endforeach;
 ```
+![personnes](./img/personnes.png)
+  
+** liste des catégories **  
 
-** liste des catégories **
-![categories](./img/categories.png)
 
 ```php
 $categs = Model::factory('Categ')->find_many();
@@ -90,3 +91,4 @@ $categs = Model::factory('Categ')->find_many();
      endforeach;
  endforeach;
 ```
+![categories](./img/categories.png)
